@@ -50,5 +50,6 @@ return res.status(200).json({message:"signout suucess!!"})
 }
 
 exports.requiresSignin = expressJwt({
-    secret:process.env.JWT_SECRET
+    secret:process.env.JWT_SECRET,
+    userProperty:"auth"
 })
